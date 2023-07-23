@@ -1,0 +1,9 @@
+services:
+  run_tests:
+    build:
+      context: ../..
+      dockerfile: ide/docker/Dockerfile
+    volumes:
+      #- ./ide/provisionning:/root
+      - ../..:/usr/src/app
+    #restart: unless-stopped
